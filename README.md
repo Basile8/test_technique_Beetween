@@ -1,8 +1,11 @@
 Bonjour,
 
 Le fonctionnement de l'application est assez simple : 
+
 -Récupérer le projet depuis Github sur sa machine. 
+
 -Depuis un environnement de développement, récupérer le projet et lancer l'application (Maven est normalement configuré).
+
 -Tout se déroule en ligne de commande, il suffit de suivre les indications.
 
 !! Important !! 
