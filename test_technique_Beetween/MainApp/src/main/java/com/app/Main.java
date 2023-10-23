@@ -23,7 +23,10 @@ public class Main {
             String companyUrl = scanInputIn.nextLine();
         //On scrap les données de la page demandée par l'utilisateur    
             offers = ScrapOffers.scrapeOffers(companyUrl);
-
+            for (int i = 0; i < offers.size(); i++){
+                JobOffer offer = offers.get(i);
+                System.out.println("Référence n°" + i + " : " + offer.getReference());
+            }
         //On inspecte le scanner
         } catch (Exception e) {
             System.out.println("Error on the scanner " + e.getMessage());
@@ -37,7 +40,7 @@ public class Main {
                 String findReference = scanInputIn.nextLine();
                 //Vérification sur la référence donnée par l'utilisateur (On vérifie la taille, le type et la valeur de l'entrée)
                 if (findReference.equals("no") || (findReference.length() != 8 && findReference.matches("\\d{8}"))) {
-                    System.out.println("Valeur entrée incorrecte");
+                    System.out.println("Fin du programme (fermeture voulue ou données d'entrée incorrecte). Merci d'avoir utilisé l'application !");
                     isFinish = true;
                 //Parcours du jeux de données à la recherche de la référence correspondante
                 } else {
